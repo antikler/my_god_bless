@@ -16,7 +16,7 @@ public class Main {
             System.out.println("Name: " + user.getName() + " "
                     + "Age: " + user.getAge() + " "
                     + "Job: " + user.getJob() + " "
-                    + "Address: "+ user.getAddress());
+                    + "Address: " + user.getAddress());
         }
     }
 }

@@ -16,7 +16,7 @@ public class User {
 
     public User(String name, Integer age, String job, String address) {
         if (!name.isEmpty()) {
-            if (age>=18) {
+            if (age >= 18) {
                 if (VALID_JOBS.contains(job)) {
                     if (VALID_ADDRESSES.contains(address)) {
                         this.name = name;
