@@ -16,17 +16,17 @@ public class User {
     private String workplace;
     private String address;
 
-    public static Map<Integer, List<User>> groupUsers(List<User> users){
+    public static Map<Integer, List<User>> groupUsers(List<User> users) {
         Map<Integer, List<User>> mapuser = new HashMap<Integer, List<User>>();
 
-        if (users == null || users.isEmpty()){
+        if (users == null || users.isEmpty()) {
             return mapuser;
         }
 
         List<User> list;
 
-        for(User user: users){
-            if(mapuser.containsKey(user.age)){
+        for (User user : users) {
+            if (mapuser.containsKey(user.age)) {
                 list = mapuser.get(user.age);
             } else {
                 list = new ArrayList<>();

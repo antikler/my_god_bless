@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         List<User> users = new ArrayList<>();
         users.add(new User("Oleg", 19, "school", "NY"));
         users.add(new User("Alex", 20, "office", "LA"));
@@ -20,10 +20,10 @@ public class Main {
 
         Map<Integer, List<User>> mapuser = User.groupUsers(users);
 
-        for (Map.Entry<Integer, List<User>> entry : mapuser.entrySet()){
+        for (Map.Entry<Integer, List<User>> entry : mapuser.entrySet()) {
             System.out.println("Age: " + entry.getKey());
             System.out.println("Users: ");
-            for (User user : entry.getValue()){
+            for (User user : entry.getValue()) {
                 System.out.println(user.getName());
             }
             System.out.println();
