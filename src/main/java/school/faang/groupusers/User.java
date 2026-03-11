@@ -17,24 +17,24 @@ public class User {
     private String address;
 
     public static Map<Integer, List<User>> groupUsers(List<User> users) {
-        Map<Integer, List<User>> mapuser = new HashMap<Integer, List<User>>();
+        Map<Integer, List<User>> mapUser = new HashMap<Integer, List<User>>();
 
         if (users == null || users.isEmpty()) {
-            return mapuser;
+            return mapUser;
         }
 
         List<User> list;
 
         for (User user : users) {
-            if (mapuser.containsKey(user.age)) {
-                list = mapuser.get(user.age);
+            if (mapUser.containsKey(user.age)) {
+                list = mapUser.get(user.age);
             } else {
                 list = new ArrayList<>();
             }
             list.add(user);
-            mapuser.put(user.age, list);
+            mapUser.put(user.age, list);
         }
 
-        return mapuser;
+        return mapUser;
     }
 }
