@@ -23,8 +23,8 @@ public class User {
     public static Map<User, String> findHobbyLovers(List<User> list, Set<String> anyActivities) {
         Map<User, String> users = new HashMap<>();
 
-        for (User user: list) {
-            for (String active: user.activities) {
+        for (User user : list) {
+            for (String active : user.activities) {
                 if (anyActivities.contains(active)) {
                     users.put(user, active);
                     break;
