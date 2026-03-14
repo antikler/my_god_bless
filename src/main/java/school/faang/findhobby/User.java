@@ -20,12 +20,12 @@ public class User {
         this.activities = activities;
     }
 
-    public static Map<User, String> findHobbyLovers(List<User> list, Set<String> any_activities) {
+    public static Map<User, String> findHobbyLovers(List<User> list, Set<String> anyActivities) {
         Map<User, String> users = new HashMap<>();
 
         for (User user: list) {
             for (String active: user.activities) {
-                if (any_activities.contains(active)) {
+                if (anyActivities.contains(active)) {
                     users.put(user, active);
                     break;
                 }
