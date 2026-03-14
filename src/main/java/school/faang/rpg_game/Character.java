@@ -30,14 +30,14 @@ public class Character {
     }
 
     public void setHealth_point(Character opponent, Integer damage) {
-        if (opponent.health_point-damage < 0) {
+        if (opponent.health_point - damage < 0) {
             opponent.health_point = 0;
         } else {
             opponent.health_point -= damage;
         }
     }
 
-    public void printStats(){
+    public void printStats() {
         System.out.println("Name: " + this.name + " "
                 + "Power: " + this.power + " "
                 + "Agility: " + this.agility + " "

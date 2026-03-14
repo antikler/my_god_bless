@@ -1,7 +1,7 @@
 package school.faang.rpg_game;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Character npc = new Character("Lutic");
         npc.printStats();
 
