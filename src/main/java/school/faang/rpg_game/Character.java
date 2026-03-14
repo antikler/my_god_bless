@@ -8,14 +8,14 @@ public class Character {
     private Integer power;
     private Integer agility;
     private Integer intellect;
-    private Integer health_point;
+    private Integer healthPoint;
 
     public Character(String name) {
         this.name = name;
         this.power = 5;
         this.agility = 5;
         this.intellect = 5;
-        this.health_point = 100;
+        this.healthPoint = 100;
     }
 
     public Character(String name, Integer power, Integer agility, Integer intellect) {
@@ -23,17 +23,17 @@ public class Character {
         this.power = power;
         this.agility = agility;
         this.intellect = intellect;
-        this.health_point = 100;
+        this.healthPoint = 100;
     }
 
     public void attack(Character opponent) {
     }
 
     public void setHealth_point(Character opponent, Integer damage) {
-        if (opponent.health_point - damage < 0) {
-            opponent.health_point = 0;
+        if (opponent.healthPoint - damage < 0) {
+            opponent.healthPoint = 0;
         } else {
-            opponent.health_point -= damage;
+            opponent.healthPoint -= damage;
         }
     }
 
@@ -42,6 +42,6 @@ public class Character {
                 + "Power: " + this.power + " "
                 + "Agility: " + this.agility + " "
                 + "Intellect: " + this.intellect + " "
-                + "HP: " + this.health_point);
+                + "HP: " + this.healthPoint);
     }
 }
