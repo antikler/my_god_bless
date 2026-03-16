@@ -17,8 +17,7 @@ public class Main {
         Map<User, String> users = User.findHobbyLovers(userList, activities);
 
         for (Map.Entry<User, String> entry : users.entrySet()) {
-            System.out.println("Name: " + entry.getKey().getName() + " "
-                    + "Activity: " + entry.getValue());
+            System.out.printf("Name: %s Activity: %s\n", entry.getKey().getName(), entry.getValue());
         }
     }
 }
