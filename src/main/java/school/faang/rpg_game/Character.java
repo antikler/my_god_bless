@@ -17,11 +17,7 @@ public abstract class Character {
     private Integer healthPoint;
 
     public Character(String name) {
-        this.name = name;
-        this.power = POWER;
-        this.agility = AGILITY;
-        this.intellect = INTELLECT;
-        this.healthPoint = HP;
+        this(name, POWER, AGILITY, INTELLECT);
     }
 
     public Character(String name, Integer power, Integer agility, Integer intellect) {
