@@ -3,19 +3,21 @@ package school.faang.rpg_game;
 import lombok.Data;
 
 @Data
-public class Character {
-    private String name;
+public abstract class Character {
+    private static final Integer POWER = 5;
+    private static final Integer AGILITY = 5;
+    private static final Integer INTELLECT = 5;
+    private static final Integer HP = 100;
+    private static final Integer MIN_HP = 0;
+
+    private final String name;
     private Integer power;
     private Integer agility;
     private Integer intellect;
     private Integer healthPoint;
 
     public Character(String name) {
-        this.name = name;
-        this.power = 5;
-        this.agility = 5;
-        this.intellect = 5;
-        this.healthPoint = 100;
+        this(name, POWER, AGILITY, INTELLECT);
     }
 
     public Character(String name, Integer power, Integer agility, Integer intellect) {
@@ -23,25 +25,16 @@ public class Character {
         this.power = power;
         this.agility = agility;
         this.intellect = intellect;
-        this.healthPoint = 100;
+        this.healthPoint = HP;
     }
 
-    public void attack(Character opponent) {
-    }
+    public abstract void attack(Character opponent);
 
-    public void setHealth_point(Character opponent, Integer damage) {
-        if (opponent.healthPoint - damage < 0) {
-            opponent.healthPoint = 0;
-        } else {
-            opponent.healthPoint -= damage;
-        }
+    protected void setHealth_point(Character opponent, Integer damage) {
+        opponent.healthPoint = opponent.healthPoint - Math.min(damage, opponent.healthPoint);
     }
 
     public void printStats() {
-        System.out.println("Name: " + this.name + " "
-                + "Power: " + this.power + " "
-                + "Agility: " + this.agility + " "
-                + "Intellect: " + this.intellect + " "
-                + "HP: " + this.healthPoint);
+        System.out.printf("%s's health is %d\n", this.name, this.healthPoint);
     }
 }
