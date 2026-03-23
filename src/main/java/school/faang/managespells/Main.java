@@ -5,7 +5,7 @@ public class Main {
         SpellCaster spellCaster = new SpellCaster();
 
         String alohomora = "Alohomora";
-        String lumos = "Lumos";
+        String lumos = null;
         String expelliarmus = "Expelliarmus";
 
         spellCaster.cast(alohomora, (spell) -> "The door was unlocked by " + spell);
