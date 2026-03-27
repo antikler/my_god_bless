@@ -4,13 +4,16 @@ import java.util.function.Function;
 
 public class Main {
     public static void main(String[] args) {
-        Image originalImage =new Image("original.jpg","Оригинальное изображение");
-        FilterProcessor filterProcessor =new FilterProcessor();
+        Image originalImage = new Image("original.jpg", "Оригинальное изображение");
+        FilterProcessor filterProcessor = new FilterProcessor();
 
         // Фильтры
-        Function<Image, Image> grayscaleFilter = (image) ->new Image(image.getName(), image.getDescription() +" | Фильтр: черно-белый");
-        Function<Image, Image> sepiaFilter = (image) ->new Image(image.getName(), image.getDescription() +" | Фильтр: сепия");
-        Function<Image, Image> vignetteFilter = (image) ->new Image(image.getName(), image.getDescription() +" | Фильтр: виньетка");
+        Function<Image, Image> grayscaleFilter = (image) -> new Image(image.getName(),
+                image.getDescription() + " | Фильтр: черно-белый");
+        Function<Image, Image> sepiaFilter = (image) -> new Image(image.getName(),
+                image.getDescription() + " | Фильтр: сепия");
+        Function<Image, Image> vignetteFilter = (image) -> new Image(image.getName(),
+                image.getDescription() + " | Фильтр: виньетка");
 
         // Применение фильтров
         Image grayscaleImage = filterProcessor.applyFilter(originalImage, grayscaleFilter);
